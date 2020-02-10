@@ -23,7 +23,7 @@ const Home = () => {
                                 </Link>
                         </div>
                     </div>
-                    <div className="w-1/3 h-40 flex-1 text-center px-4 py-2 m-2">
+                    <div className="w-1/3 h-48 flex-1 text-center px-4 py-2">
                         <div className="max-w-xs rounded overflow-hidden shadow-lg my-2">
                             <img className="w-full" src="https://cadenaser00.epimg.net/emisora/imagenes/2017/12/28/radio_madrid/1514461313_511638_1514464415_noticia_normal.jpg" alt="Sunset in the mountains"></img>
                             <Link to="/rooms">
@@ -33,7 +33,7 @@ const Home = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className="w-1/3 h-40 flex-1 text-center px-4 py-2 m-2">
+                    <div className="w-1/3 h-48 flex-1 text-center px-4 py-2">
                         <div className="max-w-xs rounded overflow-hidden shadow-lg my-2">
                             <img className="w-full" src="https://www.cinepremiere.com.mx/wp-content/uploads/2019/01/7473-cine-en-mexico-e1547245342230.jpg" alt="Sunset in the mountains"></img>
                             <Link to="/home">

@@ -55,7 +55,7 @@ class Register extends Component {
                   <label className="font-bold text-gray-700 block mb-2">Nombre</label>
                   <input className="block appearance-none w-full bg-white border border-grey-light hover:border-grey px-2 py-2 rounded shadow"
                   type="text"
-                  placeholder="Ej: Paul"
+                  placeholder="Ej: Joel"
                   name="nombre"
                   value={ nombre }
                   onChange={ this.changeHandler } 

@@ -82,7 +82,7 @@ class AddMovie extends Component {
                                     </label>
                                     <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" 
                                         type="text" 
-                                        placeholder="Ej: El Viaje al Centro de la Tierra"
+                                        placeholder="Ej: Rocky V"
                                         name="titulo"
                                         value={ titulo }
                                         onChange={ this.changeHandler } 
@@ -121,7 +121,7 @@ class AddMovie extends Component {
                                     <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" 
                                         type="number"
                                         min="0"
-                                        placeholder="Ej: 3,50"
+                                        placeholder="Ej: 4,50"
                                         name="valorBoleto"
                                         value={ valorBoleto }
                                         onChange={ this.changeHandler } 

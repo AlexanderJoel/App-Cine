@@ -16,7 +16,7 @@ class Schedules extends Component {
         this.state = {
             table_header: {
                 id: 'N°',
-                hora: 'Horas de Proyección',
+                hora: 'Horario',
             },
             horarios: [],
             hora: '',
