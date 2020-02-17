@@ -51,7 +51,6 @@ class FilmsRoomAdd extends Component {
 
     saveData = e => {
         e.preventDefault()
-        console.log(this.state.idsala)
         this.post = {
             datos: {
                 idsala: this.state.idsala,
@@ -69,7 +68,6 @@ class FilmsRoomAdd extends Component {
           axios.post(API+"sala_pelicula", this.post)
           .then(response => {
             if ( response.data.ok === true ) {
-                alert("Asignación agregada exitosamente")
                 window.location.assign("http://localhost:3000/films_room");
             }
           })
@@ -97,49 +95,43 @@ class FilmsRoomAdd extends Component {
                                     <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" htmlFor="idsala">
                                         Sala
                                     </label>
-                                    <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3" 
-                                        type="number" 
-                                        min="1"
+                                    <select className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
                                         name="idsala"
                                         value={ idsala }
-                                        onChange={ this.changeHandler } 
-                                    />
+                                        onChange={this.changeHandler}>
+                                            <option className="text-sm text-gray-600">
+                                                Seleccione sala....
+                                            </option>
+                                            { salas.map(element => (<option key={ element.id } value={ element.id }> { element.nombre } </option>))}
+                                    </select>
                                 </div>
                                 <div className="md:w-1/3 px-3">
                                     <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" htmlFor="idpelicula">
                                         Pelicula
                                     </label>
-                                    <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" 
-                                        type="number" 
-                                        min="1"
+                                    <select className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
                                         name="idpelicula"
                                         value={ idpelicula }
-                                        onChange={ this.changeHandler } 
-                                    />
+                                        onChange={this.changeHandler}>
+                                            <option className="text-sm text-gray-600">
+                                                Seleccione pelicula....
+                                            </option>
+                                            { peliculas.map(element => (<option key={ element.id } value={ element.id }> { element.titulo } </option>))}
+                                    </select>
                                 </div>
                                 <div className="md:w-1/3 px-3">
-                                    <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" htmlFor="valorBoleto">
+                                    <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" htmlFor="idhorario">
                                         Horario
                                     </label>
-                                    <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" 
-                                        type="number"
-                                        min="1"
+                                    <select className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
                                         name="idhorario"
                                         value={ idhorario }
-                                        onChange={ this.changeHandler } 
-                                    />
-                                </div>
-                            </div>
-
-                            <div className="-mx-3 md:flex mb-6 ">
-                                <div className="md:w-1/3 px-3 mb-6 md:mb-0">
-                                    { salas.map(element => <span className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" key={ element.id }> { element.id + " - " + element.nombre } </span>) }
-                                </div>
-                                <div className="md:w-1/3 px-3">
-                                    { peliculas.map(element => <span className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" key={ element.id }> { element.id + " - " + element.titulo} </span>) }
-                                </div>
-                                <div className="md:w-1/3 px-3">
-                                    { horarios.map(element => <span className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" key={ element.id }> { element.id + " - " + element.hora} </span>) }
+                                        onChange={this.changeHandler}>
+                                            <option className="text-sm text-gray-600">
+                                                Seleccione horario....
+                                            </option>
+                                            { horarios.map(element => (<option key={ element.id } value={ element.id }> { element.hora } </option>))}
+                                    </select>
                                 </div>
                             </div>
 

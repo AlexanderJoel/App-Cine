@@ -47,8 +47,7 @@ class AddMovie extends Component {
           axios.post(API, this.post)
           .then(response => {
             if ( response.data.ok === true ) {
-                alert("Pelciula agregada exitosamente")
-                window.location.assign("http://localhost:3000/add_movie");
+                window.location.assign("http://localhost:3000/movies");
             }
           })
           .catch(error => {
@@ -82,7 +81,7 @@ class AddMovie extends Component {
                                     </label>
                                     <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" 
                                         type="text" 
-                                        placeholder="Ej: Rocky V"
+                                        placeholder="Ej: El Viaje al Centro de la Tierra"
                                         name="titulo"
                                         value={ titulo }
                                         onChange={ this.changeHandler } 
@@ -119,15 +118,29 @@ class AddMovie extends Component {
                                         Valor del Boleto
                                     </label>
                                     <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" 
-                                        type="number"
+                                        type="text"
                                         min="0"
-                                        placeholder="Ej: 4,50"
+                                        placeholder="Ej: 3.50"
                                         name="valorBoleto"
                                         value={ valorBoleto }
                                         onChange={ this.changeHandler } 
                                     />
                                 </div>
                             </div>
+                            {/* <div className="-mx-3 md:flex mb-6 ">
+                                <div className="md:w-1/2 px-3 mb-6 md:mb-0">
+                                    <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" htmlFor="imagen">
+                                        Editorial
+                                    </label>
+                                    <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3" 
+                                        type="text" 
+                                        placeholder="Ej: Encarta Interprise"
+                                        name="imagen"
+                                        value={ imagen }
+                                        onChange={ this.changeHandler } 
+                                    />
+                                </div>
+                            </div> */}
                             <p className="text-red text-xs italic">Por favor complete todos los campos.</p>
                             <div className="mt-4">
                                 <button className="px-4 py-1 text-white font-light tracking-wider bg-gray-900 hover:bg-gray-800 rounded" type="submit">Guardar</button>

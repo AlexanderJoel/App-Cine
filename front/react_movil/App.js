@@ -1,35 +1,34 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { NativeRouter, Switch, Route } from "react-router-native";
 
-import Login from "./pages/Login";
-import Cartelera from "./pages/cartelera";
-import Reserve from "./pages/reserve";
-import Conexion from "./pages/conexionAPI";
-
+import Movies from './src/pages/movies';
+import MovieDetail from './src/pages/movie_detail';
+import BuyTickets from './src/pages/buy_tickets';
+import SendTickets from './src/pages/send_tickets';
 
 export default class App extends Component {
-  render() {
-    return (
-      <NativeRouter>
-        <View style={styles.container}>
-          <Switch>
-            <Route exact path="/login" component={ Login } />
-            <Route exact path="/login" component={ Cartelera } />
-            <Route path="/reserva" component={ Reserve } /> 
-            <Route path="/" component={ Conexion } /> 
-          </Switch>
-        </View>
-      </NativeRouter>
-    )
-  }
+    render() {
+        return ( 
+            <NativeRouter >
+                <View style = { styles.container } >
+                    <Switch >
+                        <Route exact path = "/" component = { Movies } /> 
+                        <Route exact path = "/movie_detail" component = { MovieDetail } /> 
+                        <Route exact path = "/buy_tickets" component = { BuyTickets } /> 
+                        <Route exact path = "/send_tickets" component = { SendTickets } /> 
+                    </Switch > 
+                </View> 
+            </NativeRouter >
+        )
+    }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
 });

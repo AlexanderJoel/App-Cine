@@ -34,7 +34,7 @@ class Movies extends Component {
     render() {
         const { peliculas } = this.state
         const image_cover = require('../assets/film.png');
-        const image_categorie = require('../assets/category2.png');
+        const image_categorie = require('../assets/category.png');
 
         return(
             <div>
@@ -51,7 +51,7 @@ class Movies extends Component {
                                 <div className="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
                                     <div className="mb-8">
                                         <div className="text-black font-bold text-xl mb-2">Título: { element.titulo }</div>
-                                        <p className="text-grey-darker text-base">Sinopsis: { element.resumen }</p>
+                                        <p className="text-grey-darker text-base">Resumen: { element.resumen }</p>
                                     </div>
                                     <div className="flex items-center">
                                         <img className="w-10 h-10 rounded-full mr-4" src={ image_categorie } alt="image_categorie" />
@@ -61,12 +61,12 @@ class Movies extends Component {
                                         </div>
                                     </div>
                                     <div className="m-3">
-                                        <button className="bg-white text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                                        {/* <button className="bg-white text-gray-800 font-bold rounded border-b-2 border-green-500 hover:border-green-600 hover:bg-green-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                                 <path fill="currentcolor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
                                             </svg>
                                             <span className="mr-2">Actualizar</span>
-                                        </button>
+                                        </button> */}
                                     </div>
                                     <div className="m-3">
                                         <button className="bg-white text-gray-800 font-bold rounded border-b-2 border-red-500 hover:border-red-600 hover:bg-red-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center"

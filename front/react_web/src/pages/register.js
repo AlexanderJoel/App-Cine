@@ -48,7 +48,7 @@ class Register extends Component {
       <div className="bg-pink-200 h-screen font-sans">
         <div className="container mx-auto h-full flex justify-center items-center">
         <div className="w-1/3">
-            <h1 className="font-hairline mb-6 text-center text-2xl">Registrate!!! :3</h1>
+            <h1 className="font-hairline mb-6 text-center text-2xl">Registrarse!</h1>
             <div className="border-teal p-8 border-t-12 bg-white mb-6 rounded-lg shadow-lg">
               <form className="px-8 pt-6 pb-8 mb-4 bg-white rounded" onSubmit={ this.registerUser }>
                 <div className="mb-4">
