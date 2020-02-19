@@ -38,7 +38,7 @@ export default class Report extends Component {
         aligncaptionwithcanvas: "0",
         captionpadding: "0",
         decimals: "1",
-        plottooltext: "<h1>$percentValue</h1> recaudado por la peclícula<h1>($label)</h1>",
+        plottooltext: "<h1>$value</h1> recaudado por la peclícula<h1>($label)</h1>",
         theme: "fusion",
         baseFont: "Verdana",
         baseFontSize: "15",
@@ -48,7 +48,7 @@ export default class Report extends Component {
     };
 
     const chartConfigs = {
-      type: 'doughnut2d',
+      type: 'column2d',
       dataSource: datos,
       width: "800",
       height: "600",

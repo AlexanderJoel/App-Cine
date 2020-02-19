@@ -33,7 +33,7 @@ class Register extends Component {
       .then(response => {
         if ( response.data.ok === true ) {
           alert("Usuario registrado correctamente")
-          window.location.assign("http://localhost:3000/");
+          window.location.assign("http://localhost:3000/movies");
         }
       })
       .catch(error => {

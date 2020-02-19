@@ -31,7 +31,6 @@ class AddMovie extends Component {
                 resumen: this.state.resumen,
                 categoria: this.state.categoria,
                 valorBoleto: this.state.valorBoleto,
-                // imagen: this.state.imagen,
                 estado: this.state.estado,
             }
         }
@@ -40,7 +39,6 @@ class AddMovie extends Component {
             this.post.datos.resumen === "" ||
             this.post.datos.categoria === "" ||
             this.post.datos.valorBoleto === ""
-            // this.post.datos.imagen === ""
             ) {
           alert("Complete todos los datos para continuar...");
         } else {
@@ -63,7 +61,6 @@ class AddMovie extends Component {
             resumen, 
             categoria, 
             valorBoleto, 
-            // imagen,
         } = this.state
         return(
             <div>
@@ -127,20 +124,6 @@ class AddMovie extends Component {
                                     />
                                 </div>
                             </div>
-                            {/* <div className="-mx-3 md:flex mb-6 ">
-                                <div className="md:w-1/2 px-3 mb-6 md:mb-0">
-                                    <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" htmlFor="imagen">
-                                        Editorial
-                                    </label>
-                                    <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3" 
-                                        type="text" 
-                                        placeholder="Ej: Encarta Interprise"
-                                        name="imagen"
-                                        value={ imagen }
-                                        onChange={ this.changeHandler } 
-                                    />
-                                </div>
-                            </div> */}
                             <p className="text-red text-xs italic">Por favor complete todos los campos.</p>
                             <div className="mt-4">
                                 <button className="px-4 py-1 text-white font-light tracking-wider bg-gray-900 hover:bg-gray-800 rounded" type="submit">Guardar</button>

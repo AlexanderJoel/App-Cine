@@ -38,7 +38,7 @@ const Sidebar = () => (
                             <Link to="/movies">
                                 <li className="mx-8 text-gray-600 hover:text-gray-900">
                                     <i className="fas fa-arrow-circle-right"></i>
-                                    Catálogo
+                                    Cartelera
                                 </li>
                             </Link>
                         </ul>
