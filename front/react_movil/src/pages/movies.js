@@ -55,7 +55,8 @@ export default class Movies extends Component {
             <Text style={{color: '#fff', marginVertical: '10%', alignItems: 'center', paddingHorizontal: '5%'}}>Cine</Text>
                 <TouchableHighlight style={styles.menuButton}>
                   <Link to="/">
-                      <Text style={{color: '#fff'}}>Cartelera</Text>
+                      <Text style={{color: '#fff'}}>
+                      <Icon style={styles.openButton} name="home" size={20} color="#fff" />Cartelera</Text>
                   </Link>
                 </TouchableHighlight>
               </View>

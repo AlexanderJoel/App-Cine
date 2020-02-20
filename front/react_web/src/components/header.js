@@ -5,9 +5,6 @@ import { Link } from "react-router-dom";
 const Header = () => (
         <div className="flex-grow flex mr-2 ml-64">
             <div className="flex-grow flex">
-                {/* <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4">
-                    Ayuda
-                </a> */}
             </div>
             <div>
                 <Link to="/">

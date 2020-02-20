@@ -18,7 +18,7 @@ module.exports = db.sequelize.define("pelicula", {
         type: Sequelize.STRING
     },
     valorBoleto: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
     },
     imagen: {
         type: Sequelize.STRING

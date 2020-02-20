@@ -128,8 +128,8 @@ export default class SendTickets extends Component {
               <Text style={styles.textHeader}>CINE YAVIRAC</Text>
             </View>
               <TouchableHighlight style={styles.menu}>
-                <Link to="/" >
-                  <Icon style={styles.openButton} name="home" size={30} color="#fff" />
+                <Link to="/buy_tickets" >
+                  <Icon style={styles.openButton} name="arrow-circle-left" size={30} color="#fff" />
                 </Link>
               </TouchableHighlight>
         </View>
