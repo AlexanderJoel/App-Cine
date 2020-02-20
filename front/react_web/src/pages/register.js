@@ -87,12 +87,12 @@ class Register extends Component {
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <button type="submit" className="bg-teal-600 hover:bg-teal-700 focus:outline-none focus:shadow-outline text-white font-bold py-2 px-4 rounded">
-                    Registrarse
-                  </button>
                   <a href="http://localhost:3000/" className="bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline text-white font-bold py-2 px-4 rounded">
                     Volver
                   </a>
+                  <button type="submit" className="bg-teal-600 hover:bg-teal-700 focus:outline-none focus:shadow-outline text-white font-bold py-2 px-4 rounded">
+                    Registrarse
+                  </button>
                 </div>  
               </form>
             </div>

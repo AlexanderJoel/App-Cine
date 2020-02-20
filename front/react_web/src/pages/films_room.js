@@ -77,9 +77,6 @@ class FilmsRoom extends Component {
                                         <td>
                                             { sala_peliculas.map(element => <p className="p-2 px-5" key={ element.id }> {element.idhorario_hora} </p>) }
                                         </td>
-                                        <td>
-                                            { sala_peliculas.map(element => <p className="p-2 px-5" key={ element.id }><button onClick={ () => this.deleteData(element.id) } className="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Eliminar</button></p> )}
-                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
