@@ -6,9 +6,7 @@ import { Link } from 'react-router-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import axios from 'axios';
 
-const API = "http://172.16.24.48:5000/film/pelicula";
-
-// https://aboutreact.com/example-of-sqlite-database-in-react-native/
+const API = "http://192.168.100.6:5000/film/pelicula";
 
 export default class Movies extends Component {
     constructor(props) {

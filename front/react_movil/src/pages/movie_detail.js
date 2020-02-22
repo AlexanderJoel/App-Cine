@@ -7,7 +7,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { RadioButton } from 'react-native-paper';
 import axios from 'axios';
 
-const API = "http://172.16.24.48:5000/film/";
+const API = "http://192.168.100.6:5000/film/";
 
 export default class MovieDetail extends Component {
   constructor(props) {

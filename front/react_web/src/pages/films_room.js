@@ -5,6 +5,8 @@ import Header from '../components/header';
 import axios from 'axios';
 
 const API = "http://localhost:5000/film/raw3";
+const API2 = "http://localhost:5000/film/sala_pelicula";
+
 
 class FilmsRoom extends Component {
     constructor(props) {
@@ -34,7 +36,7 @@ class FilmsRoom extends Component {
     }
     
     deleteData = (value) => {
-        axios.delete(`${ API }?id=${ value }`, {
+        axios.delete(`${ API2 }?id=${ value }`, {
             data: { id: value }
         })
         window.location.assign("http://localhost:3000/films_room");
@@ -76,6 +78,9 @@ class FilmsRoom extends Component {
                                         </td>
                                         <td>
                                             { sala_peliculas.map(element => <p className="p-2 px-5" key={ element.id }> {element.idhorario_hora} </p>) }
+                                        </td>
+                                        <td>
+                                            { sala_peliculas.map(element => <p className="p-2 px-5" key={ element.id }><button onClick={ () => this.deleteData(element.id) } className="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Eliminar</button></p> )}
                                         </td>
                                     </tr>
                                 </tbody>
